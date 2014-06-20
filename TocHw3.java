@@ -23,6 +23,8 @@ public class TocHw3 {
 	public static void main(String[] args)
 	{
 		try {
+			if(args.length!=4) { System.out.println("Error! Argument數量不正確!"); System.exit(0); }
+			
 			URL url = new URL(args[0]);
 			Reader myReader = new BufferedReader(new InputStreamReader(url.openStream(),"UTF-8"));
 			JSONTokener myTokener = new JSONTokener(myReader);
